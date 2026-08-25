@@ -38,12 +38,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (i + j);
 }
 
-int	main(void)
-{
-	char dest[10] = "o";
-	char src[10] = "W";
+// int	main(void)
+// {
+// 	char dest[10] = "o";
+// 	char src[10] = "W";
 
-	printf("%zu", ft_strlcat(dest, src, 16));
+// 	printf("%zu", ft_strlcat(dest, src, 16));
 
-	return (0);
-}
+// 	return (0);
+// }
