@@ -1,7 +1,7 @@
 #include "libft.h"
 
 
-char *strchr(const char *s, int c){
+char *ft_strchr(const char *s, int c){
      size_t i = 0;
 
      while (s[i] != '\0')
