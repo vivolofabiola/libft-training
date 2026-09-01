@@ -6,12 +6,11 @@
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 15:58:22 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/08/24 15:58:57 by fvivolo          ###   ########.fr       */
+/*   Updated: 2026/09/01 17:50:05 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

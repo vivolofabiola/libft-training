@@ -1,22 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/01 17:49:08 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/09/01 17:49:09 by fvivolo          ###   ########.fr       */
+/*   Created: 2026/09/01 16:58:54 by fvivolo           #+#    #+#             */
+/*   Updated: 2026/09/01 17:49:34 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	main(void)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	printf("Result: %d\n", ft_isalpha('A'));
-	printf("Result: %d\n", ft_isdigit('5'));
-	printf("Result: %d\n", ft_atoi("--56"));
-	return (0);
 }

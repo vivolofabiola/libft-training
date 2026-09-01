@@ -1,20 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/01 17:50:51 by fvivolo           #+#    #+#             */
+/*   Updated: 2026/09/01 17:50:52 by fvivolo          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void *ft_memcpy(void *dst, const void *src, size_t n){
+void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	unsigned char	*ptr_dst;
+	unsigned char	*ptr_src;
+	size_t			i;
 
-    unsigned char *ptr_dst;
-    unsigned char *ptr_src;
-    size_t i = 0;
-
-    ptr_dst = (unsigned char *)dst;
-    ptr_src = (unsigned char *)src;
-
-    while(i < n){
-        ptr_dst[i] = ptr_src[i];
-        i++;
-    }
-
-    return(dst);
+	i = 0;
+	ptr_dst = (unsigned char *)dst;
+	ptr_src = (unsigned char *)src;
+	while (i < n)
+	{
+		ptr_dst[i] = ptr_src[i];
+		i++;
+	}
+	return (dst);
 }
 
 // int main(void)

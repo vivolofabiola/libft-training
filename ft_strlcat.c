@@ -6,12 +6,11 @@
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 16:02:24 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/08/24 18:47:28 by fvivolo          ###   ########.fr       */
+/*   Updated: 2026/09/01 17:50:08 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
