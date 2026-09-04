@@ -6,7 +6,7 @@
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:49:50 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/09/01 17:49:51 by fvivolo          ###   ########.fr       */
+/*   Updated: 2026/09/04 17:34:32 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,3 @@ size_t	ft_strlen(const char *s)
 	}
 	return (i);
 }
-
-// int main(){
-
-//     char *a = "Holaaaa aaaaaaa aaaaaa";
-
-//     printf("%zu", ft_strlen(a));
-
-//     return (0);
-// }

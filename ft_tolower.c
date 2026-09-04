@@ -6,7 +6,7 @@
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:49:23 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/09/01 17:49:24 by fvivolo          ###   ########.fr       */
+/*   Updated: 2026/09/04 17:36:10 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,3 @@ int	ft_tolower(int c)
 		return (c);
 	}
 }
-
-// int main(){
-
-//     printf("%d", ft_tolower('Z'));
-// }

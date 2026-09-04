@@ -6,7 +6,7 @@
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:50:47 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/09/01 17:50:48 by fvivolo          ###   ########.fr       */
+/*   Updated: 2026/09/04 17:32:55 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,3 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-// int main(void)
-// {
-// 	char buf[8] = "ABCDEFG";
-
-// 	printf("Before: %s\n", buf);
-// 	ft_memmove(buf + 2, buf, 5);
-// 	printf("After:  %s\n", buf);
-// 	return (0);
-// }

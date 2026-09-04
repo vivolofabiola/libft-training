@@ -6,7 +6,7 @@
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:50:44 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/09/01 17:50:44 by fvivolo          ###   ########.fr       */
+/*   Updated: 2026/09/04 17:33:01 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
-// int main(){
-
-//     char buf[6] = "Hello";
-
-// 	ft_memset(buf, 'A', 5);
-// 	printf("%s\n", buf);
-
-//     return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 16:02:24 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/09/01 17:50:08 by fvivolo          ###   ########.fr       */
+/*   Updated: 2026/09/04 17:34:18 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	return (i + j);
 }
-
-// int	main(void)
-// {
-// 	char dest[10] = "o";
-// 	char src[10] = "W";
-
-// 	printf("%zu", ft_strlcat(dest, src, 16));
-
-// 	return (0);
-// }
