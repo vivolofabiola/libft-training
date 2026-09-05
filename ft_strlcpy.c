@@ -25,9 +25,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		}
 		i++;
 	}
-	if (dstsize > 0)
-	{
-		dst[dstsize - 1] = '\0';
+	if(i < dstsize){
+		dst[i] = '\0';
+	} else{dst[dstsize - 1] = '\0';
 	}
+	
 	return (i);
 }

@@ -49,13 +49,31 @@ static size_t	ft_word_end(const char *s, size_t i, char c)
 	return (i);
 }
 
+static int	ft_extract_word(char **result, const char *s, size_t *i,
+		size_t *word_index, char c)
+{
+	size_t	word_start;
+
+	while (s[*i] && s[*i] == c)
+		(*i)++;
+	if (s[*i] == '\0')
+		return (0);
+	word_start = *i;
+	*i = ft_word_end(s, *i, c);
+	result[*word_index] = ft_substr(s, word_start, *i - word_start);
+	if (result[*word_index] == NULL)
+		return (-1);
+	(*word_index)++;
+	return (1);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	words;
 	char	**result;
 	size_t	i;
 	size_t	word_index;
-	size_t	word_start;
+	int		status;
 
 	words = ft_count_words(s, c);
 	result = malloc((words + 1) * sizeof(char *));
@@ -63,21 +81,13 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	i = 0;
 	word_index = 0;
-	while (s[i])
+	status = ft_extract_word(result, s, &i, &word_index, c);
+	while (status == 1)
+		status = ft_extract_word(result, s, &i, &word_index, c);
+	if (status == -1)
 	{
-		while (s[i] && s[i] == c)
-			i++;
-		if (s[i] == '\0')
-			break ;
-		word_start = i;
-		i = ft_word_end(s, i, c);
-		result[word_index] = ft_substr(s, word_start, i - word_start);
-		if (result[word_index] == NULL)
-		{
-			ft_free_split(result, word_index);
-			return (NULL);
-		}
-		word_index++;
+		ft_free_split(result, word_index);
+		return (NULL);
 	}
 	result[word_index] = NULL;
 	return (result);

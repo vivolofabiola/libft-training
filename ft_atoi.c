@@ -14,30 +14,28 @@
 
 int	ft_atoi(const char *str)
 {
+	int	num;
+	int	isneg;
 	int	i;
-	int	sign;
-	int	result;
 
+	num = 0;
+	isneg = 1;
 	i = 0;
-	sign = 1;
-	result = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-		|| str[i] == '\f' || str[i] == '\r')
-	{
+	while (str[i] && (str[i] == ' ' || str[i] == '\t'
+			|| str[i] == '\n' || str[i] == '\r'
+			|| str[i] == '\v' || str[i] == '\f'))
 		i++;
-	}
-	if (str[i] == '-' || str[i] == '+')
+	if (str[i] == '+')
+		i++;
+	else if (str[i] == '-')
 	{
-		if (str[i] == '-')
-		{
-			sign = -1;
-		}
+		isneg *= -1;
 		i++;
 	}
 	while (ft_isdigit(str[i]))
 	{
-		result = result * 10 + (str[i] - '0');
+		num = (num * 10) + (str[i] - '0');
 		i++;
 	}
-	return (result * sign);
+	return (num * isneg);
 }
