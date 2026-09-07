@@ -25,6 +25,7 @@ static char *ft_convert_itoa(long n, char *new_s, size_t len){
     if(new_s == NULL){
         return (NULL);
     }
+    new_s[len] = '\0';
 
     if (n < 0){
         new_s[0] = '-';
