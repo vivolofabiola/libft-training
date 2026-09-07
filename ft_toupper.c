@@ -6,7 +6,7 @@
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:49:14 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/09/02 18:46:13 by fvivolo          ###   ########.fr       */
+/*   Updated: 2026/09/04 17:36:14 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,3 @@ int	ft_toupper(int c)
 		return (c);
 	}
 }
-
-// int main(){
-
-//     printf("%d", ft_toupper('F'));
-// }

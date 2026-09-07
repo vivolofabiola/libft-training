@@ -6,7 +6,7 @@
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:50:51 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/09/01 17:50:52 by fvivolo          ###   ########.fr       */
+/*   Updated: 2026/09/04 17:32:48 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-// int main(void)
-// {
-// 	char src[] = "Hello World";
-// 	char dst[20];
-
-// 	ft_memcpy(dst, src, 6);
-// 	dst[6] = '\0';
-// 	printf("dst: %s\n", dst);
-// 	return (0);
-// }

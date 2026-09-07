@@ -1,13 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/04 17:31:34 by fvivolo           #+#    #+#             */
+/*   Updated: 2026/09/04 17:31:35 by fvivolo          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new){
-
-new->next = *lst;
-*lst = new;
-
-
-
-
-
-
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	new->next = *lst;
+	*lst = new;
 }

@@ -6,7 +6,7 @@
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 16:02:24 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/09/01 17:50:08 by fvivolo          ###   ########.fr       */
+/*   Updated: 2026/09/04 17:34:18 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,20 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	i;
+	size_t	dstlen;
+	size_t	srclen;
 	size_t	j;
 
-	i = 0;
+	dstlen = ft_strlen(dst);
+	srclen = ft_strlen(src);
+	if (size <= dstlen)
+		return (size + srclen);
 	j = 0;
-	while (dst[i] != '\0')
+	while (src[j] != '\0' && dstlen + j + 1 < size)
 	{
-		i++;
-	}
-	while (src[j] != '\0')
-	{
-		if (i + j + 1 < size)
-			dst[i + j] = src[j];
+		dst[dstlen + j] = src[j];
 		j++;
 	}
-	if (size > 0)
-	{
-		dst[i + 1] = '\0';
-		i++;
-	}
-	return (i + j);
+	dst[dstlen + j] = '\0';
+	return (dstlen + srclen);
 }
-
-// int	main(void)
-// {
-// 	char dest[10] = "o";
-// 	char src[10] = "W";
-
-// 	printf("%zu", ft_strlcat(dest, src, 16));
-
-// 	return (0);
-// }

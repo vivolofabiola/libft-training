@@ -6,7 +6,7 @@
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:49:29 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/09/02 18:45:14 by fvivolo          ###   ########.fr       */
+/*   Updated: 2026/09/04 17:36:03 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (len < ft_strlen(s) - start)
 		copy_len = len;
 	else
+	{
 		copy_len = ft_strlen(s) - start;
+	}
 	substr = malloc(copy_len + 1);
 	if (substr == NULL)
 		return (NULL);

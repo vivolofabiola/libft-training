@@ -6,7 +6,7 @@
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:52:51 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/09/01 17:52:52 by fvivolo          ###   ########.fr       */
+/*   Updated: 2026/09/04 17:41:36 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,28 @@
 
 int	ft_atoi(const char *str)
 {
-	int i = 0;
-	int sign = 1;
-	int result = 0;
+	int	num;
+	int	isneg;
+	int	i;
 
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-		|| str[i] == '\f' || str[i] == '\r')
+	num = 0;
+	isneg = 1;
+	i = 0;
+	while (str[i] && (str[i] == ' ' || str[i] == '\t'
+			|| str[i] == '\n' || str[i] == '\r'
+			|| str[i] == '\v' || str[i] == '\f'))
+		i++;
+	if (str[i] == '+')
+		i++;
+	else if (str[i] == '-')
 	{
+		isneg *= -1;
 		i++;
 	}
-
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-		{
-			sign = -1;
-		}
-		i++;
-	}
-
 	while (ft_isdigit(str[i]))
 	{
-		result = result * 10 + (str[i] - '0');
+		num = (num * 10) + (str[i] - '0');
 		i++;
 	}
-
-	return (result * sign);
+	return (num * isneg);
 }

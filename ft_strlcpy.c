@@ -6,7 +6,7 @@
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 15:58:22 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/09/01 17:50:05 by fvivolo          ###   ########.fr       */
+/*   Updated: 2026/09/04 17:34:26 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		}
 		i++;
 	}
-	if (dstsize > 0)
-	{
-		dst[dstsize - 1] = '\0';
+	if(i < dstsize){
+		dst[i] = '\0';
+	} else{dst[dstsize - 1] = '\0';
 	}
+	
 	return (i);
 }
-
-// int	main(void)
-// {
-// 	char dest[10] = "Epa";
-// 	char src[10] = "Hey!";
-
-// 	printf("%zu", ft_strlcpy(dest, src, 3));
-
-// 	return (0);
-// }

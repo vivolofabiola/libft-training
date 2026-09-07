@@ -6,7 +6,7 @@
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:51:02 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/09/01 17:51:03 by fvivolo          ###   ########.fr       */
+/*   Updated: 2026/09/04 17:30:51 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,3 @@ int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }
-// int main(){
-
-//     int a = ' ';
-
-//     printf("%d", ft_isprint(a));
-
-//     return (0);
-// }

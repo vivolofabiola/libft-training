@@ -6,7 +6,7 @@
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:51:10 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/09/01 17:51:11 by fvivolo          ###   ########.fr       */
+/*   Updated: 2026/09/04 17:30:40 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,3 @@ int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }
-// int main(){
-
-//     int a = 500;
-
-//     printf("%d", ft_isascii(a));
-
-//     return (0);
-// }

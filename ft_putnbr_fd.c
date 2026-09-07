@@ -6,7 +6,7 @@
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:50:28 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/09/01 17:50:37 by fvivolo          ###   ########.fr       */
+/*   Updated: 2026/09/04 17:33:10 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char digit;
+	char	digit;
 
 	if (n == -2147483648)
 		write(fd, "-2147483648", 11);

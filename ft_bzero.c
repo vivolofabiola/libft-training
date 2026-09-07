@@ -6,7 +6,7 @@
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:52:43 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/09/01 17:52:46 by fvivolo          ###   ########.fr       */
+/*   Updated: 2026/09/04 17:30:20 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-
-// int main(){
-
-//     char buf[6] = "Hello";
-
-// 	printf("Before: %s\n", buf);
-// 	ft_bzero(buf, 3);
-// 	printf("After: ");
-// 	for (int i = 0; i < 6; i++)
-// 		printf("[%d]", buf[i]);
-// 	printf("\n");
-
-//     return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:51:06 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/09/01 17:51:07 by fvivolo          ###   ########.fr       */
+/*   Updated: 2026/09/04 17:30:46 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,3 @@ int	ft_isdigit(int c)
 {
 	return ((c >= '0' && c <= '9'));
 }
-
-// int main(){
-
-//     int a = 'a';
-
-//     printf("%d", ft_isdigit(a));
-
-//     return (0);
-// }

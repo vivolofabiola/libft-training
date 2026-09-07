@@ -1,74 +1,92 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/04 17:33:21 by fvivolo           #+#    #+#             */
+/*   Updated: 2026/09/04 17:33:22 by fvivolo          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_count_words(const char *s, char c)
+static char	**ft_free(char **s)
 {
-	size_t	words;
-	size_t	i;
+	int	i;
 
-	words = 0;
 	i = 0;
 	while (s[i])
 	{
-		if ((i == 0 || s[i - 1] == c) && s[i] != c)
-		{
-			words++;
-		}
+		free(s[i]);
 		i++;
 	}
-	return (words);
+	free(s);
+	return (NULL);
 }
 
-static void	ft_free_split(char **result, size_t word_index)
+static int	ft_get_rows(char const *s, char c)
 {
-	while (word_index > 0)
-	{
-		word_index--;
-		free(result[word_index]);
-	}
-	free(result);
-}
+	int	rows;
+	int	i;
 
-static size_t	ft_word_end(const char *s, size_t i, char c)
-{
-	while (s[i] && s[i] != c)
+	rows = 0;
+	i = 0;
+	while (s[i])
 	{
-		i++;
+		while (s[i] == c)
+			i++;
+		if (s[i] != '\0')
+			rows++;
+		while (s[i] && s[i] != c)
+				i++;
 	}
-	return (i);
+	return (rows);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	words;
-	char	**result;
-	size_t	i;
-	size_t	word_index;
-	size_t	word_start;
+	char	**new;
+	char	*wordstart;
+	int		i;
 
-	words = ft_count_words(s, c);
-	result = malloc((words + 1) * sizeof(char *));
-	if (result == NULL)
+	new = (char **)malloc(sizeof(char *) * (ft_get_rows(s, c) + 1));
+	if (!new)
 		return (NULL);
 	i = 0;
-	word_index = 0;
-	while (s[i])
+	while (*s)
 	{
-		while (s[i] && s[i] == c)
-			i++;
-		if (s[i] == '\0')
-			break ;
-		word_start = i;
-		i = ft_word_end(s, i, c);
-		result[word_index] = ft_substr(s, word_start, i - word_start);
-		if (result[word_index] == NULL)
+		if (*s != c)
 		{
-			ft_free_split(result, word_index);
-			return (NULL);
+			wordstart = (char *)s;
+			while (*s != c && *s)
+				s++;
+			new[i] = ft_substr(wordstart, 0, s - wordstart);
+			if (!**new)
+				return (ft_free(new));
+			i++;
 		}
-		word_index++;
+		else
+			s++;
 	}
-	result[word_index] = NULL;
-	return (result);
+	new[i] = NULL;
+	return (new);
 }
+
+/*int	main(void)
+{
+	char **array;
+	char const s[] = "Helllooooooooo world of 42";
+	char c = ' ';
+	int	i;
+	array = ft_split(s, c);
+	printf("%d\n", ft_get_rows(s, c));
+	//printf("%c", **ft_split(s, c));
+	i = 0;
+	while (array[i])
+	{
+		printf("%s\n", array[i]);
+		i++;
+	}
+}*/
