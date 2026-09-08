@@ -6,7 +6,7 @@
 /*   By: fvivolo <fvivolo@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 17:31:00 by fvivolo           #+#    #+#             */
-/*   Updated: 2026/09/04 17:31:19 by fvivolo          ###   ########.fr       */
+/*   Updated: 2026/09/08 16:06:09 by fvivolo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,27 +34,33 @@ static size_t	ft_itoa_len(long n)
 	return (len);
 }
 
-static char *ft_convert_itoa(long n, char *new_s, size_t len){
-    new_s = malloc(len + 1);
-    if(new_s == NULL){
-        return (NULL);
-    }
-    new_s[len] = '\0';
+static char	*ft_convert_itoa(long n, char *new_s, size_t len)
+{
+	int	isnegative;
 
-    if (n < 0){
-        new_s[0] = '-';
-        n = -n;
-    }
-    len--;
-    while(len){
-        new_s[len] = (n % 10) + '0';
-        n = n / 10;
-        len--;
-    }
-    if(new_s[0] != '-'){
-        new_s[0] = (n % 10) + '0';
-    }
-    return(new_s);
+	new_s = malloc(len + 1);
+	if (new_s == NULL)
+	{
+		return (NULL);
+	}
+	new_s[len] = '\0';
+	isnegative = 0;
+	if (n < 0)
+	{
+		new_s[0] = '-';
+		isnegative = 1;
+		n = -n;
+	}
+	len--;
+	while (len)
+	{
+		new_s[len] = (n % 10) + '0';
+		n = n / 10;
+		len--;
+	}
+	if (isnegative == 0)
+		new_s[0] = (n % 10) + '0';
+	return (new_s);
 }
 
 char	*ft_itoa(int n)
